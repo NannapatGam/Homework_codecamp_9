@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ข้อ1
+        let arr1 = [1, 2, 30, 400]
+        
+        let arr2 = arr1.filter( x => x > 10);
+        
+        //ข้อ2
+        let arr1 = [1, 2, 3, 4]
+
+        let arr2 = arr1.filter( x=> x%2 == 1);
+
+        //ข้อ3
+        let arr1 = [1, "1", 2, {}];
+        
+        let arr2 = arr1.filter( x => typeof x == 'number');
+        //หรือ
+        let arr2 = arr1.filter(Number.isFinite);
+
+        
+        //ข้อ4
+        let arr1 = ['apple', 'banana', 'orange', 'pineapple', 'watermelon'];
+        
+        let arr2 = arr1.filter( x => x.length > 6 );
+
+        //ข้อ5
+        let arr1 = [
+            { name: "apple", age: 14},
+            { name: "banana", age: 18},
+            { name: "watermelon", age: 32},
+            { name: "pineapple", age: 16},
+            { name: "peach", age: 24}
+        ];
+
+        let arr2 = arr1.filter( x => x.age < 18 );
+
+        //ข้อ6
+        let arr1 = [
+            { name: "apple", age: 14},
+            { name: "banana", age: 18},
+            { name: "watermelon", age: 32},
+            { name: "pineapple", age: 16},
+            { name: "peach", age: 24}
+        ];
+
+        let arr2 = arr1.filter( x => x.age !== 32 );
+
+        //ข้อ7
+        let arr1 = [1, -3, 2, 8, -4, 5];
+
+        let arr2 = arr1.filter( x => x > 0);
+        
+        //ข้อ8
+        let arr1 = [1, 3, 4, 5, 6, 7, 8];
+        
+        let arr2 = arr1.filter( x => x%3 == 0);
+
+        //ข้อ9
+        let arr1 = ['peach', 1, -3, "2", {}, [] ];
+
+        let arr2 = arr1.filter( x => typeof x == 'string');    
+
+        //ข้อ10
+        let arr1 = ["APPLE", "appLE", "PEACH", "PEach"];
+
+        let arr2 = arr1.filter( x => x.charCodeAt(0)+x.charCodeAt(1)+x.charCodeAt(2)+x.charCodeAt(3)+x.charCodeAt(4) < 440 );
+        //or
+        let arr2 = arr1.filter( x => x.toUpperCase() == x );
+
+
+        //ข้อ11
+        let arr1 = [
+            { name: 'apple', birth: '2001-01-01' },
+            { name: 'banana', birth: '1990-10-10' },
+            { name: 'watermelon', birth: '1985-12-30' },
+            { name: 'peach', birth: '2002-10-13' }
+        ];
+
+        let arr2 = arr1.filter( x => x.birth.indexOf("10") > 0);
+
+        //ข้อ12
+        let arr1 = [
+            { name: 'apple', birth: '2001-01-01' },
+            { name: 'banana', birth: '1990-10-10' },
+            { name: 'watermelon', birth: '1985-12-30' },
+            { name: 'peach', birth: '2002-10-13' }
+        ];
+
+        let arr2 = arr1.filter( x => x.birth.slice(0, 4) < 2000 );
+    </script>
+</body>
+</html>

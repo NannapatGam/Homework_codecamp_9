@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ข้อ1
+        function unique(arr) {
+            let s = new Set(arr);
+            let arr2 = Array.from(s);
+            return arr2;
+        }
+
+        let values = ['Hare', 'Krishna','Hare', 'Krishna', 'Krishna', 'Krishna', 'Hare', 'Hare', ':-0'];
+
+        alert(unique(values));
+
+        //ข้อ3
+        let map = new Map();
+
+        map.set('name', 'John');
+
+        let keys = map.keys();
+
+        keys = Array.from(keys);
+
+        keys.push('more');
+    </script>
+</body>
+</html>

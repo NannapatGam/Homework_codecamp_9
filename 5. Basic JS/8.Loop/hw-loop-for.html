@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication table</title>
+    <style>
+        #p1 {
+            font-size: 2em;
+            color: salmon;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1"> </p>
+
+    <script>
+        let a = prompt('ใส่เลขสูตรคูณที่ต้องการ');
+
+        for (let b = 1; b<13; b++) {
+            document.querySelector('#p1').innerHTML += `${a} x ${b} = ${a*b} <br>`;
+        }
+    </script>
+</body>
+</html>

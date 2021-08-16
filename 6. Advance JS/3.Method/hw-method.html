@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ข้อ1
+        let user = {
+            name: "John",
+            go: function() {
+                alert(this.name)
+            }
+        };
+
+        user.go();
+        //ได้ alert "John"
+
+        //ข้อ2
+        function makeUser() {
+            return {
+                name: "John",
+                ref: this 
+            };
+        };
+
+        let user = makeUser();
+        alert(user.ref.name);
+        //ได้ Window เพราะ โดน Global obj ใน browser เรียก ในที่นี้คือ Window
+
+        //ข้อ3
+        let calculator = {
+            read() {
+                this.first = +prompt("Enter first number");
+                this.second = +prompt("Enter second number");
+            },
+
+            sum() {
+                return this.first + this.second;
+            },
+            
+            mul() {
+                return this.first * this.second;
+            }
+        };
+        
+       
+        calculator.read();
+        alert( calculator.sum() );
+        alert( calculator.mul() );
+
+        //ข้อ4
+        let ladder = {
+            step: 0,
+
+            up() {
+                this.step++;
+                return this
+            },
+            
+            down() {
+                this.step--;
+                return this
+            },
+            
+            showStep() {
+                alert(this.step);
+                return this
+            }
+        };
+
+        ladder.up().up().down().showStep(); //จะใช้ท่านี้ได้ ต้องใส่ return this เพื่อให้ func นั้นคืนค่ามาเป็น obj เดิม
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+5.7.1
+   ตอบ
+	1. 5 > 4			true
+	2. "apple" > "pineapple"	false
+	3. "2" > "12"		true เพราะ 2 มาก่อน 1
+	4. undefined == null	true
+	5. undefined === null	false
+	6. "bee" < "be"		false
+	7. "bee" > "Bee"		true
+	8. "Bee" < "be"		true เพราะ น้อยกว่าตั้งแต่ B

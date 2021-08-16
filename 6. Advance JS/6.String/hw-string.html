@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ข้อ1
+        function ucFirst(str) {
+            str = prompt("Enter some word...");
+            let first = str[0].toUpperCase();
+            str = str.slice(1).toLowerCase();
+            alert(first + str);
+        }
+        ucFirst();
+
+        //ข้อ2
+        function checkSpam() {
+            let str = prompt("Enter your message");
+            str = str.includes("xxx" || "viagra");
+            alert(str);
+        }
+        checkSpam();
+
+        //ข้อ3
+        function truncate(str, maxlength) {
+            if(str.length > maxlength) {
+                console.log(str.slice(0, maxlength) + "...")
+            } else {
+                console.log(str)
+              }
+        }
+        truncate("Hello world", 5)
+
+        //ข้อ4
+        function extractCurrencyValue(str, rate) {
+            str = Number(str.slice(1))
+            let baht = str*rate
+            console.log(baht)
+        }
+        extractCurrencyValue("$120", 30.5)
+    </script>
+</body>
+</html>

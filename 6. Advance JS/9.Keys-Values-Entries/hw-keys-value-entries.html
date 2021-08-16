@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ข้อ1
+        let salaries = {
+            'John': 100,
+            'Pete': 300,
+            'Mary': 250
+        };
+
+        function sumSalaries(v) {
+            let total = 0;
+
+            let arr = Object.values(v);
+
+            arr.map(x => total += x);
+            return total;
+        }
+        
+        alert( sumSalaries(salaries) );
+
+        //ข้อ2
+        let user = {
+            name: 'John',
+            age: 30
+        };
+
+        function count(x) {
+            let y = Object.entries(x);
+            return y.length;
+        }
+
+        alert( count(user) );
+    </script>
+</body>
+</html>
